@@ -1,0 +1,16 @@
+body {
+  color: #666;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+section {
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}

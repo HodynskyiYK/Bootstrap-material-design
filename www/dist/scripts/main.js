@@ -1,2 +1,3 @@
-
-$(document).ready(function(){console.log('true!');});
+$(document).ready(function() {
+	console.log('true!');
+});

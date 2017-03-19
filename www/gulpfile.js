@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
     csso = require('gulp-csso'),
+    concatCss = require('gulp-concat-css'),
     shorthand = require('gulp-shorthand'),
     cleanCSS = require('gulp-clean-css'),
     rename = require("gulp-rename"),
@@ -22,20 +23,27 @@ gulp.task('html', function () {
     .pipe(notify("html Done!"));
 });
 
-// minify scss
-gulp.task('compressCSS', function() {
+// sass
+gulp.task('sass', function() {
   return gulp.src('app/scss/styles.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(csso())
+    .pipe(rename('styles.css'))
+    .pipe(gulp.dest('app/css'))
+    .pipe(notify("sass Done!"));
+});
+
+// minify and autoprefixer css
+gulp.task('minifyCSS', function() {
+  return gulp.src('app/css/*.css')
     .pipe(shorthand())
     .pipe(autoprefixer({
-        browsers: ['last 20 versions'],
+        browsers: ['last 60 versions'],
         cascade: false
     }))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(rename('style.css'))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(notify("compressCSS Done!"));
+    //.pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('app/css'))
+    .pipe(notify("minify and autoprefixer css Done!"));
 });
 
 // minify js
@@ -74,7 +82,8 @@ gulp.task('bower', function () {
 
 gulp.task('watch', function () {
 	gulp.watch('bower.json', ['bower'])
-  gulp.watch('app/scss/styles.scss', ['compressCSS'])
+  gulp.watch('app/scss/styles.scss', ['sass'])
+  gulp.watch('app/css/*.css', ['minifyCSS'])
   gulp.watch('app/js/main.js', ['compressJS'])
   gulp.watch('app/index.html', ['html'])
 });
