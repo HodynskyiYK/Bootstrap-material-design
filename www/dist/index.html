@@ -12,17 +12,75 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!-- Bootstrap -->
-	<link href="scripts/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="scripts/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Bootstrap Material Design -->
 	<link href="scripts/bootstrap-material-design/dist/css/bootstrap-material-design.css" rel="stylesheet">
 	<link href="scripts/bootstrap-material-design/dist/css/ripples.min.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="css/vendor.css">
+	
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header></header>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="bs-component">
+					<div class="navbar navbar-default">
+						<div class="container-fluid">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="javascript:void(0)">Brand<div class="ripple-container"></div></a>
+							</div>
+							<div class="navbar-collapse collapse navbar-responsive-collapse">
+								<ul class="nav navbar-nav">
+									<li class="active"><a href="javascript:void(0)">Active</a></li>
+									<li><a href="javascript:void(0)">Link</a></li>
+									<li class="dropdown">
+										<a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+											<b class="caret"></b></a>
+											<ul class="dropdown-menu">
+												<li><a href="javascript:void(0)">Action</a></li>
+												<li><a href="javascript:void(0)">Another action</a></li>
+												<li><a href="javascript:void(0)">Something else here</a></li>
+												<li class="divider"></li>
+												<li class="dropdown-header">Dropdown header</li>
+												<li><a href="javascript:void(0)">Separated link</a></li>
+												<li><a href="javascript:void(0)">One more separated link</a></li>
+											</ul>
+									</li>
+								</ul>
+								<form class="navbar-form navbar-left">
+									<div class="form-group is-empty">
+										<input type="text" class="form-control col-md-8" placeholder="Search">
+									</div>
+								</form>
+								<ul class="nav navbar-nav navbar-right">
+									<li><a href="javascript:void(0)">Link</a></li>
+									<li class="dropdown">
+										<a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dropdown
+											<b class="caret"></b><div class="ripple-container"></div>
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="javascript:void(0)">Action</a></li>
+											<li><a href="javascript:void(0)">Another action</a></li>
+											<li><a href="javascript:void(0)">Something else here</a></li>
+											<li class="divider"></li>
+											<li><a href="javascript:void(0)">Separated link</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 	<main>
 		<section>
 			<div class="container">
@@ -41,11 +99,14 @@
 	</main>
 	<footer></footer>
 	
-	<script src="scripts/vendor.js"></script>
+	
+
+	<!-- jquery -->
+	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
 
 	<!-- bootstrap material design -->
-	<script src="scripts/bootstrap/js/tether.js"></script>
-	<script src="scripts/bootstrap/js/bootstrap.min.js"></script>
+	<!-- <script src="scripts/bootstrap/js/tether.js"></script> -->
+	<script src="scripts/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="scripts/bootstrap-material-design/dist/js/ripples.min.js"></script>
 	<script src="scripts/bootstrap-material-design/dist/js/material.min.js"></script>
 	<script type="text/javascript">
